@@ -10,16 +10,16 @@
     {/each}
     </select>
 </div>
-<br> {@html md.render(data.c[data.selected]?.md || '')}
+<br> 
+<div class="cont">
+{@html md.render(data.c[data.selected]?.md || '')}
+</div>
 <style>
+    .cont {
+        text-align: left;
+    }
     :global(img) {
         width: 60px;
-    }
-    :global(body) {
-        background-color: #e9e8cd;
-        text-align: left;
-        padding: 20px;
-        color: rgb(11, 55, 40);
     }
     :global(h1) {
         text-align: center;
@@ -27,6 +27,7 @@
         text-shadow: 1px 1px 3px gray;
     }
     div.tv {
+        padding-top: 20px;
         text-align: center;
     }
     div.tv select {

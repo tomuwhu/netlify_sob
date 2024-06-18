@@ -5,7 +5,6 @@
 
 <div>Counter: <span>{data.x}</span></div>
 
-
 <p>
     <a target="_blank" href="https://svelte.dev">Svelte</a> + 
     <a target="_blank" href="https://kit.svelte.dev">SvelteKit</a> + 
@@ -13,11 +12,6 @@
 </p>
 
 <style>
-    :global(body) {
-        background-color: #e9e8cd;
-        text-align: center;
-        color: rgb(11, 55, 40);
-    }
     div {
         font-family: 'Times New Roman', Times, serif;
         font-size: 20px;
