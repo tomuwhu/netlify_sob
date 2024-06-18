@@ -42,4 +42,15 @@
         font-size: 20px;
         padding: 10px;
     }
+    :global(a) {
+        all: unset;
+        cursor: pointer;
+        color: gray;
+    }
+    :global(a:hover) {
+        text-shadow: 1px 1px 3px gray;
+    }
+    :global(a:visited) {
+        color: rgb(74, 20, 20);
+    }
 </style>
