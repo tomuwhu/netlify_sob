@@ -1,4 +1,10 @@
+<script>
+    export let data
+    console.log(data)
+</script>
 <h1>SOB FullStack Példaoldal</h1>
+
+counter: {data.x}
 
 <p>
     <a href="https://svelte.dev">Svelte</a> + <a href="https://kit.svelte.dev">SvelteKit</a> + <a
