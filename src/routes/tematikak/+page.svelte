@@ -16,6 +16,13 @@
 </div>
 <style>
     .cont {
+        color: rgb(36, 57, 66);
+        display: inline-block;
+        border: solid 1px gray;
+        border-radius: 17px;
+        padding: 20px;
+        background-color: rgb(193, 229, 216);
+        box-shadow: 1px 1px 3px inset black;
         text-align: left;
     }
     :global(img) {
@@ -27,6 +34,7 @@
         text-shadow: 1px 1px 3px gray;
     }
     div.tv {
+
         padding-top: 20px;
         text-align: center;
     }
