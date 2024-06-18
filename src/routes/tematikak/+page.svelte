@@ -34,13 +34,15 @@
         text-shadow: 1px 1px 3px gray;
     }
     div.tv {
-
         padding-top: 20px;
         text-align: center;
     }
     div.tv select {
-        font-size: 20px;
-        padding: 10px;
+        border-radius: 10px;
+        background-color: antiquewhite;
+        color: rgb(22, 60, 47);
+        font-size: 15px;
+        padding: 5px;
     }
     :global(a) {
         all: unset;
