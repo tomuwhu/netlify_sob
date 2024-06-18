@@ -5,6 +5,7 @@
 
 <div>Counter: <span>{data.x}</span></div>
 
+<hr>
 <p>
     <a target="_blank" href="https://github.com/tomuwhu/netlify_sob">Forrás a GitHub-on</a>
     <br>

@@ -12,17 +12,27 @@
 </div>
 <br> 
 <div class="cont">
-{@html md.render(data.c[data.selected]?.md || '')}
+    <div>
+        {@html md.render(data.c[data.selected]?.md || '')}
+    </div>
 </div>
 <style>
+    .cont div {
+        display: inline-block;
+        border: solid 1px gray;
+        border-radius: 10px;
+        padding: 25px;
+        background-color: rgb(193, 229, 216);
+        box-shadow: 1px 1px 3px inset black;
+    }
     .cont {
         color: rgb(36, 57, 66);
         display: inline-block;
         border: solid 1px gray;
         border-radius: 17px;
-        padding: 20px;
-        background-color: rgb(193, 229, 216);
-        box-shadow: 1px 1px 3px inset black;
+        padding: 10px;
+        background-color: rgb(93, 140, 123);
+        box-shadow: 1px 1px 3px black;
         text-align: left;
     }
     :global(img) {
@@ -30,8 +40,9 @@
     }
     :global(h1) {
         text-align: center;
-        color: rgb(116, 43, 23);
+        color: rgb(8, 92, 98);
         text-shadow: 1px 1px 3px gray;
+        margin-top: 0px;
     }
     div.tv {
         padding-top: 20px;
