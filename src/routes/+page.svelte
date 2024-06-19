@@ -44,4 +44,9 @@
         border: solid 1px;
         padding: 6px;
     }
+    h1 {
+        color: rgb(96, 98, 8);
+        text-shadow: 1px 1px 3px gray;
+        margin-top: 20px;
+    }
 </style>
