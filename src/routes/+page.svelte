@@ -3,7 +3,11 @@
 </script>
 <br>
 <h1>SOB Backend/FullStack alkalmazásfejlesztés</h1>
+{#if data.user == null}
 <h3>Dr. Németh Tamás</h3>
+{:else}
+<h3>Bejelentkezve: {data.user.name}</h3>
+{/if}
 
 <div>Counter: <span>{data.x}</span> | Bejelentkezve: <span>{data.n} felhasználó</span></div>
 

@@ -12,7 +12,8 @@ const db = new Db({
 export async function load(event) {
     var user
     if (user = event.cookies.get('user')) {
-        if (store &&store.has(user)) {
+        console.log(!store.has(user))
+        if (!store.has(user)) {
             event.cookies.delete(user, {path: '/'})
         }
     }
