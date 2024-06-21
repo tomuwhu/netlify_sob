@@ -7,6 +7,7 @@
 <h3>Nincs bejelentkezve!</h3>
 {:else}
 <div class="tv">
+    Tantárgy választása:
     <select bind:value={data.selected}>
     {#each data.c as c, key}
         <option value={key}>{c.subject}</option>
@@ -86,6 +87,9 @@
     div.tv {
         padding-top: 20px;
         text-align: center;
+        font-size: 18px;
+        text-shadow: 1px 1px 3px gray;
+        color: rgb(13, 13, 58);
     }
     div.tv select {
         border-radius: 10px;
