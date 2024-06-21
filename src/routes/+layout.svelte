@@ -1,23 +1,10 @@
-<!--
-<script>
-    import { page } from '$app/stores'
-    $: currentRoute = $page.url.pathname
-    const menu = [{name: 'Home', href: '/'}, {name: 'Cica', href: '/cica'}]
-</script>
-<div class="menu">
-    {#each menu as item}
-        <a class={currentRoute === item.href ? 'active' : ''} href={item.href}>{item.name}</a>
-    {/each}
-</div>
--->
-
 <script>
     import { page } from '$app/stores'
     $: currentRoute = $page.url.pathname
     export let data
     const menu = data.user?.email ?
         [{name: 'Kezdőoldal', href: '/'}, {name: 'Felhasználók / Portfóliók listája', href: '/listall'},{name: 'Tematikák', href: '/tematikak'}, {name: 'Felhasználói adatlap', href: '/login'}] :
-        [{name: 'Kezdőoldal', href: '/'}, {name: 'Regisztráció', href: '/reg'}, {name: 'Bejelentkezés', href: '/login'}]
+        [{name: 'Kezdőoldal', href: '/'}, {name: 'Regisztráció', href: '/reg2'}, {name: 'Bejelentkezés', href: '/login'}]
 </script>
 <div class="menu">
     {#each menu as item}

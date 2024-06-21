@@ -19,21 +19,28 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
     }
     :global(div.fc div) {
         display: inline-block;
         background-color: aquamarine;
-        padding: 10px;
+        padding: 5px;
+        padding-left:30px;
+        padding-right:30px;
         margin: 10px;
         border-radius: 16px;
         border: solid 2px green;
         box-shadow: 1px 1px 3px black;
+        white-space: nowrap;
+        
     }
     :global(div.fc div.s1) {
-        background-color: rgb(221, 190, 155);
+        background-color: rgb(251, 242, 232);
+        border:solid 2px blue;
     }
     :global(div.fc div.s1:hover) {
-        background-color: rgb(255, 189, 189);
+        background-color: rgb(255, 160, 160);
+        border:solid 2px red;
     }
     :global(div.fc div.s2) {
         background-color: rgb(215, 188, 90);

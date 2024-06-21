@@ -1,5 +1,4 @@
 import { db } from '$lib/db'
-import {store} from '$lib/store'
 export const actions = {
     default: async ({ request, cookies }) => { 
         const formData = await request.formData()
