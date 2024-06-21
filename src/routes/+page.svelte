@@ -1,10 +1,11 @@
 <script>
     export let data
 </script>
+<br>
 <h1>SOB Backend/FullStack alkalmazásfejlesztés</h1>
 <h3>Dr. Németh Tamás</h3>
 
-<div>Counter: <span>{data.x}</span></div>
+<div>Counter: <span>{data.x}</span> | Bejelentkezve: <span>{data.n} felhasználó</span></div>
 
 <hr>
 <p>
@@ -45,10 +46,9 @@
         border: solid 1px;
         padding: 6px;
     }
-    h1 {
-        color: rgb(96, 98, 8);
+
+    h3 {
         text-shadow: 1px 1px 3px gray;
-        margin-top: 20px;
     }
     img.gh {
         width: 30px;
