@@ -3,6 +3,9 @@
     import markdownit from 'markdown-it'
     const md = markdownit()
 </script>
+{#if data.user?.email == null}
+<h3>Nincs bejelentkezve!</h3>
+{:else}
 <div class="tv">
     <select bind:value={data.selected}>
     {#each data.c as c, key}
@@ -16,6 +19,7 @@
         {@html md.render(data.c[data.selected]?.md || '')}
     </div>
 </div>
+{/if}
 <style>
     .cont div {
         display: inline-block;
