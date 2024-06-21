@@ -56,7 +56,7 @@
         background-color: rgb(179, 191, 72);
     }
     :global(div.fc div.s3:hover) {
-        background-color: rgb(155, 167, 50);
+        background-color: rgb(236, 244, 170);
     }
     :global(div.fc div a) {
         all: unset;

@@ -9,6 +9,7 @@ body {
     user-select: none;
     margin: 0px;
     padding: 0px;
+    overflow-y: scroll;
 }
 input {
     padding: 10px;
