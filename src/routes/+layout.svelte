@@ -37,21 +37,21 @@
     }
     div.menu a {
         all: unset;
-        padding: 0px;
+        padding: 5px;
         margin: 0px;
         padding-left: 15px;
         padding-right: 15px;
     }
     div.menu a.norm {
         background-color: black;
-        color: rgb(15, 55, 41);
+        color: rgb(213, 236, 228);
         cursor: pointer;
         display: inline-block;
     }
     div.menu a.selected {
-        color: rgb(27, 50, 32);
+        color: rgb(8, 36, 34);
         background-color: #e9e8cd;
-        text-shadow: 1px 1px 4px gray;
+        text-shadow: 0px 0px 2px gray;
     }
     div.menu a.norm:hover {
         text-shadow: 1px 1px 4px gray;
@@ -61,6 +61,6 @@
         color: rgb(106, 238, 132);
     }
     div.menu a.norm:visited {
-        color: rgb(133, 177, 213);
+        color: rgb(218, 222, 198);
     }
 </style>
