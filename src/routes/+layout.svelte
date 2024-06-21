@@ -1,15 +1,28 @@
+<!--
 <script>
-    export let data
+    import { page } from '$app/stores'
+    $: currentRoute = $page.url.pathname
+    const menu = [{name: 'Home', href: '/'}, {name: 'Cica', href: '/cica'}]
 </script>
 <div class="menu">
-    <a href="/">Kezdőoldal</a>
-    {#if data.user?.email}
-    <a href="/tematikak">Tematikák</a>
-    <a href="/login">Felhasználói adatlap</a>
-    {:else}
-    <a href="/reg">Regisztráció</a>
-    <a href="/login">Bejelentkezés</a>
-    {/if}
+    {#each menu as item}
+        <a class={currentRoute === item.href ? 'active' : ''} href={item.href}>{item.name}</a>
+    {/each}
+</div>
+-->
+
+<script>
+    import { page } from '$app/stores'
+    $: currentRoute = $page.url.pathname
+    export let data
+    const menu = data.user?.email ?
+        [{name: 'Kezdőoldal', href: '/'}, {name: 'Tematikák', href: '/tematikak'}, {name: 'Felhasználói adatlap', href: '/login'}] :
+        [{name: 'Kezdőoldal', href: '/'}, {name: 'Regisztráció', href: '/reg'}, {name: 'Bejelentkezés', href: '/login'}]
+</script>
+<div class="menu">
+    {#each menu as item}
+        <a class={currentRoute === item.href ? 'selected' : 'norm'} href={item.href}>{item.name}</a>
+    {/each}
 </div>
 <slot/>
 <style>
@@ -20,24 +33,34 @@
     }
     div.menu {
         background-color: black ;
+        text-align: right;
     }
     div.menu a {
         all: unset;
-        background-color: black;
-        color: rgb(173, 208, 196);
-        padding: 5px;
+        padding: 0px;
         margin: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    div.menu a.norm {
+        background-color: black;
+        color: rgb(15, 55, 41);
         cursor: pointer;
         display: inline-block;
     }
-    div.menu a:hover {
+    div.menu a.selected {
+        color: rgb(27, 50, 32);
+        background-color: #e9e8cd;
+        text-shadow: 1px 1px 4px gray;
+    }
+    div.menu a.norm:hover {
         text-shadow: 1px 1px 4px gray;
         color: rgb(255, 255, 240);
     }
-    div.menu a:active {
+    div.menu a.norm:active {
         color: rgb(106, 238, 132);
     }
-    div.menu a:visited {
+    div.menu a.norm:visited {
         color: rgb(133, 177, 213);
     }
 </style>

@@ -43,7 +43,6 @@
         <input type="submit" value="Portfólió URL módosítása">
     {/if}
 </form>
-
 <hr>
 <form action="?/logout" method="POST" name="Login" id="Login" >
     <br>
