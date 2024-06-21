@@ -37,8 +37,8 @@
     }
     div.menu a {
         all: unset;
-        padding: 5px;
-        margin: 0px;
+        padding: 2px;
+        margin: 5px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -49,6 +49,7 @@
         display: inline-block;
     }
     div.menu a.selected {
+        border-radius: 10px;
         color: rgb(8, 36, 34);
         background-color: #e9e8cd;
         text-shadow: 0px 0px 2px gray;

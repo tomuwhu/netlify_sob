@@ -6,6 +6,7 @@ h1 {
     font-size: 22px;
 }
 body {
+    user-select: none;
     margin: 0px;
     padding: 0px;
 }
