@@ -9,8 +9,8 @@ const db = new Db({
     database: 'docstore'
 })
 export async function load() {
-    var c = await db.getrow("SELECT value FROM variables WHERE name='counter'")
-    var n = Number(c.value)
+    var { value } = await db.getrow("SELECT value FROM variables WHERE name='counter'")
+    var n = Number(value)
     const rowsAffected = await db.update("UPDATE variables SET value = ? WHERE name='counter'", [n + 1])
 	return { x: n + 1 }
 }
