@@ -9,7 +9,13 @@ const db = new Db({
     password: MYSQL_PASS,
     database: 'docstore'
 })
-export async function load() {
+export async function load(event) {
+    var user
+    if (user = event.cookies.get('user')) {
+        if (store &&store.has(user)) {
+            event.cookies.delete(user, {path: '/'})
+        }
+    }
     var { value } = await db.getrow("SELECT value FROM variables WHERE name='counter'")
     var n = Number(value)
     const rowsAffected = await db.update("UPDATE variables SET value = ? WHERE name='counter'", [n + 1])
