@@ -16,7 +16,7 @@
     $: currentRoute = $page.url.pathname
     export let data
     const menu = data.user?.email ?
-        [{name: 'Kezdőoldal', href: '/'}, {name: 'Tematikák', href: '/tematikak'}, {name: 'Felhasználói adatlap', href: '/login'}] :
+        [{name: 'Kezdőoldal', href: '/'}, {name: 'Felhasználók / Portfóliók listája', href: '/listall'},{name: 'Tematikák', href: '/tematikak'}, {name: 'Felhasználói adatlap', href: '/login'}] :
         [{name: 'Kezdőoldal', href: '/'}, {name: 'Regisztráció', href: '/reg'}, {name: 'Bejelentkezés', href: '/login'}]
 </script>
 <div class="menu">
