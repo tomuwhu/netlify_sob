@@ -49,14 +49,19 @@
         background-color: #e9e8cd;
         text-shadow: 0px 0px 2px gray;
     }
-    div.menu a.norm:hover {
-        text-shadow: 1px 1px 4px gray;
-        color: rgb(255, 255, 240);
-    }
-    div.menu a.norm:active {
-        color: rgb(106, 238, 132);
-    }
     div.menu a.norm:visited {
         color: rgb(218, 222, 198);
+    }
+    div.menu a.norm:hover {
+        border-radius: 10px;
+        color: rgb(195, 253, 249);
+        background-color: #46463c;
+        text-shadow: 0px 0px 2px gray;
+    }
+    div.menu a.norm:active {
+        border-radius: 10px;
+        color: rgb(126, 15, 3);
+        background-color: #ffffa7;
+        text-shadow: 0px 0px 2px gray;
     }
 </style>
