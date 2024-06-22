@@ -6,7 +6,7 @@
         [   
             {name: 'Kezdőoldal', href: '/'}, 
             {name: 'Felhasználók portfóliói', href: '/listall'},
-            {name: 'Tantárgyi tematikák, portfólió követelmények', href: '/tematikak'}, 
+            {name: 'Tárgyi tematikák, követelmények', href: '/tematikak'}, 
             {name: 'Felhasználói adatlap', href: '/login'}
         ] : [   
             {name: 'Kezdőoldal', href: '/'}, 
