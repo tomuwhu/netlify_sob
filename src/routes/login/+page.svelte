@@ -5,6 +5,7 @@
     import { browser } from '$app/environment'
     import { goto } from '$app/navigation'
     if (browser && form?.wp == 3) goto('/listall')
+    const valid_url = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/
     var password, passwordcheck, url = data?.user?.pfurl
 </script>
 {#if form?.wp } <h2>Hibás felhasználónev vagy jelszó</h2> {/if}
@@ -40,6 +41,10 @@
     {:else}
         <br><br>
         <input type="text" name="url" bind:value={url} placeholder="Portfólió URL">
+        <br><br>
+        {#if valid_url.test(url)}
+        <a href="{url}" target="_blank">{url}</a>
+        {/if}
     {/if}
     <br><br>
     {#if url != data?.user?.pfurl}
