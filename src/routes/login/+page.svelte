@@ -2,6 +2,9 @@
     import sha1 from 'sha1'
     export let data
     export let form
+    import { browser } from '$app/environment'
+    import { goto } from '$app/navigation'
+    if (browser && form?.wp == 3) goto('/listall')
     var password, passwordcheck, url = data?.user?.pfurl
 </script>
 {#if form?.wp } <h2>Hibás felhasználónev vagy jelszó</h2> {/if}

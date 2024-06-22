@@ -18,7 +18,8 @@ export const actions = {
             return { user : null, wp: 1 }
         }
         store.add(c[0].email)
-        cookies.set('user', JSON.stringify(c[0]), {path: '/', maxAge: 1000})
+        cookies.set('user', JSON.stringify(c[0]), { path: '/', maxAge: 1000 })
+        return { wp: 3 }
     },
     logout: async ({ cookies }) => {
         const userstr = cookies.get('user')
