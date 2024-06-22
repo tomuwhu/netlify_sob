@@ -43,7 +43,11 @@
         <input type="text" name="url" bind:value={url} placeholder="Portfólió URL">
         <br><br>
         {#if valid_url.test(url)}
-        <a href="{url}" target="_blank">{url}</a>
+        <div class="url">
+            <span>Portfólió URL:</span>
+            <a href="{url}" target="_blank">{url}</a>
+        </div>
+        
         {/if}
     {/if}
     <br><br>
@@ -58,5 +62,24 @@
 </form>
 {/if}
 <style>
-
+div.url {
+    background-color: rgb(197, 238, 238);
+    padding: 10px;
+    border-top: solid 1px green;
+    border-bottom: solid 1px green;
+}
+input[name=url] {
+    background-color: rgb(234, 250, 250);
+}
+input[type=password] {
+    background-color: rgb(255, 255, 248);
+}
+input[disabled] {
+    font-size: 16px;
+    color: rgb(43, 79, 106);
+    text-shadow: 1px 1px 3px gray;
+    border: none;
+    background-color: rgb(250, 247, 242);
+    text-align: center;
+}
 </style>
