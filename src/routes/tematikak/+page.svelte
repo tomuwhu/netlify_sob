@@ -2,6 +2,9 @@
     export let data
     import markdownit from 'markdown-it'
     const md = markdownit()
+    import { browser } from '$app/environment'
+    import { goto } from '$app/navigation'
+    if (browser && data.user == null) goto('/login')
 </script>
 {#if data.user?.email == null}
 <h3>Nincs bejelentkezve!</h3>

@@ -1,5 +1,8 @@
 <script>
     export let data
+    import { browser } from '$app/environment'
+    import { goto } from '$app/navigation'
+    if (browser && data.user == null) goto('/login')
 </script>
 {#if data.user == null}
     <h3>Nincs bejelentkezve!</h3>
