@@ -3,7 +3,7 @@
 </script>
 <br>
 <h1>SOB Backend/FullStack alkalmazásfejlesztés</h1>
-{#if data.user == null}
+{#if data.user == null || data.user?.email == null}
 <h3>Dr. Németh Tamás</h3>
 {:else}
 <h3>Bejelentkezve: {data.user.name}</h3>
