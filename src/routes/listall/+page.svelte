@@ -48,7 +48,7 @@
         width: 300px;
         display: inline-block;
         padding: 6px;
-        background-color: azure;
+        background-color: rgb(216, 236, 223);
         border-radius: 6px;
         border: solid 2px gray;
         margin: 3px
@@ -72,7 +72,6 @@
     }
     :global(div.fc div) {
         display: inline-block;
-        background-color: aquamarine;
         padding: 5px;
         margin: 10px;
         border-radius: 7px;
@@ -127,8 +126,12 @@
         width: 300px;
         height: 100px;
         border-radius: 10px;
-        background-color: rgb(230, 242, 207);
+        background-color: rgb(253, 255, 221);
+        color: rgb(23, 56, 67);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         box-shadow: 1px 1px 3px inset rgb(119, 22, 22);
         padding: 10px;
     }
+
 </style>

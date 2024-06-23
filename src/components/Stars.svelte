@@ -11,7 +11,7 @@
 </button>
 <style>
     .sc {
-        background-color: rgb(98, 88, 74);
+        background-color: rgb(101, 134, 117);
         margin-top: 20px;
         display: inline-block;
         padding-top: 0px;

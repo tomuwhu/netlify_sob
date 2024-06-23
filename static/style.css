@@ -19,7 +19,7 @@ input {
     width: 300px;
 }
 input[type="submit"] {
-    padding: 10px;
+    padding: 7px;
     font-size: 14px;
     border-radius: 10px;
     border: solid 1px green;
@@ -27,7 +27,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 input[type="submit"]:hover {
-    padding: 10px;
+    padding: 7px;
     font-size: 14px;
     border-radius: 10px;
     background-color: aqua;
