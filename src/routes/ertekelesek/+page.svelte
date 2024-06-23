@@ -16,7 +16,7 @@
 {/each}
 <style>
     h1 {
-        padding-top: 14px;
+        padding-top: 10px;
     }
     div.velemeny {
         display: inline-block;

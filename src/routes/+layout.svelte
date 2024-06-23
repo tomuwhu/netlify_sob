@@ -14,6 +14,10 @@
             {name: 'Regisztráció', href: '/reg2'}, 
             {name: 'Bejelentkezés', href: '/login'}
         ]
+    if (data.user?.pfurl == 'admin') {
+        menu.unshift({name: 'Értékelesek', href: '/admin'});
+        [menu[1], menu[0]] = [menu[0], menu[1]]
+    }
 </script>
 <div class="menu">
     {#each menu as item}
@@ -64,5 +68,42 @@
         color: rgb(126, 15, 3);
         background-color: #ffffa7;
         text-shadow: 0px 0px 2px gray;
+    }
+    :global(h1) {
+        text-align: center;
+        color: rgb(8, 92, 98);
+        text-shadow: 1px 1px 3px gray;
+        margin-top: 0px;
+        font-size: 22px;
+    }
+    :global(body) {
+        user-select: none;
+        margin: 0px;
+        padding: 0px;
+        overflow-y: scroll;
+    }
+    :global(input) {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: solid 1px green;
+        width: 300px;
+    }
+    :global(input[type="submit"]) {
+        padding: 7px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: solid 1px green;
+        width: 300px;
+        cursor: pointer;
+    }
+    :global(input[type="submit"]:hover) {
+        padding: 7px;
+        font-size: 14px;
+        border-radius: 10px;
+        background-color: aqua;
+        border: solid 1px green;
+        width: 300px;
+        cursor: pointer;
     }
 </style>
