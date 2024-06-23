@@ -25,7 +25,7 @@
                     vto = user
             }}>📝</button>
             {:else}
-            <a class="view nv" title='Értékeléseim megtekintése' href="/ertekelesek">🫣</a>
+            <a class="view nv" id=zu title='Értékeléseim megtekintése' href="/ertekelesek">🫣</a>
             {/if}
         </div>
     {/each}
@@ -157,5 +157,8 @@
     }
     :global(textarea.nv) {
         background-color: rgb(252, 255, 232);
+    }
+    :global(a#zu) {
+        background-color: rgb(253, 192, 192);
     }
 </style>
