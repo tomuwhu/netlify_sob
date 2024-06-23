@@ -16,7 +16,7 @@
         return Number(n) * Number(x)
     }
 </script>
-<h1>Toplista</h1>
+<h1>Profilok Toplistája</h1>
 <table>
     <tr class="head">
         <th></th>
@@ -58,6 +58,10 @@
     }
     table {
         margin: 0 auto;
+        padding-top: 6px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
         border-spacing: 10px;
         border: solid 2px gray;
         box-shadow: 0px 0px 8px black;
