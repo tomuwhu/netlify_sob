@@ -4,7 +4,7 @@
     import { goto } from '$app/navigation'
     import Stars from '$components/Stars.svelte'
     if (browser && data.user == null) goto('/login')
-    var vto = null
+    var vto = null, stars = 0
 </script>
 <h1 class='pl'>Portfóliók listája</h1>
 {#if data.user == null}
@@ -32,11 +32,13 @@
         <form action="?/insert" method="POST">
             <span class=x>Vélemény írása <i>{vto?.name}</i> részére:</span><br>
             <input type=hidden name=email value={vto.email}>
+            <input type=hidden name=stars value={stars}>
             <textarea name=vto placeholder=Vélemény></textarea>
             <br>
-            <Stars sv=3/>
             <br>
-            <input type=submit value="Vélemény rögzítése">
+            <input type=submit value="Csak a szöveges vélemény rögzítése">
+            <br>
+            <Stars bind:sv={stars}/>
         </form>
 
     </div>

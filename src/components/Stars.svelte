@@ -2,20 +2,30 @@
     export let sv = 0
     var nsv = sv
 </script>
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div on:mouseleave={() => sv = nsv}>
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-{#each [1,2,3,4,5] as _, i}
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<i on:mousemove={() => sv = i + 1} on:click={() => nsv = sv}>
-{#if sv > i}★{:else}☆{/if}
-</i>
+<button class=sc on:mouseleave={() => sv = nsv}>
+{#each Array(5).fill() as _, i}
+    <button class=i on:mousemove={() => sv = i + 1} on:click={() => nsv = sv}>
+    {#if sv > i}★{:else}☆{/if}
+    </button>
 {/each}
-</div>
+</button>
 <style>
-    i {
+    .sc {
+        background-color: rgb(98, 88, 74);
+        margin-top: 20px;
+        display: inline-block;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 4px;
+        border-radius: 20px;
+        border: solid 3px gold;
+        box-shadow: 0px 0px 5px black;
+    }
+    .i {
         all: unset;
-        font-size: 35px;
+        font-size: 25px;
         cursor: pointer;
+        color:gold;
     }
 </style>
