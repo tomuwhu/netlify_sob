@@ -6,26 +6,38 @@
 </script>
 <h1>Toplista</h1>
 <table>
-    <tr>
+    <tr class="head">
+        <th></th>
         <th>Név</th>
         <th>Hivatkozás</th>
         <th>Átlagos értékelés</th>
         <th>Összes értékelés</th>
         <th>Pontszám</th>
     </tr>
-{#each data.toplist as row}
+{#each data.toplist as row, rid}
     <tr>
-        <td class="l"><div>{row.name}</div></td>
-        <td class="l"><a href={row.pfurl} class="view" target="_blank">{row.pfurl}</a></td>
-        <td class="c">{Number(row.st).toFixed(2)}</td>
-        <td class="r">{#each Array(Math.round(Number(row?.n)*5 - Math.round(Number(row?.n)*Number(row?.st)))).fill() as x, i}<i>☆</i>{/each}{#each Array(Math.round(Number(row?.n)*Number(row?.st))).fill() as x, i}★{/each}</td>
+        <th class=rid>{rid+1}.</th>
+        <td class=l><div>{row.name}.</div></td>
+        <td class=l><a href={row.pfurl} class="view" target="_blank">{row.pfurl}</a></td>
+        <td class=c>{Number(row.st).toFixed(2)}</td>
+        <td class=r>{#each Array(Math.round(Number(row?.n)*5 - Math.round(Number(row?.n)*Number(row?.st)))).fill() as x, i}<i>☆</i>{/each}{#each Array(Math.round(Number(row?.n)*Number(row?.st))).fill() as x, i}★{/each}</td>
         <td class="c x">{Number(row.score).toFixed(2)}</td>
     </tr>
 {/each}
 </table>
 <style>
+    tr.head th {
+        color: rgb(168, 165, 0);
+    }
     h1 {
         padding-top: 20px;
+    }
+    th.rid {
+        text-align: right;
+        padding-right: 18px;
+        color:rgb(164, 139, 0);
+        text-shadow: 0px 0px 3px rgb(136, 136, 136);
+        font-size: 20px;
     }
     table {
         margin: 0 auto;
@@ -33,7 +45,8 @@
         border: solid 2px gray;
         box-shadow: 0px 0px 8px black;
         border-radius: 15px;
-        background-color: rgb(218, 241, 234);
+        background-color: rgb(237, 241, 218);
+        border: solid 10px rgb(88, 82, 0);
     }
     td {
         padding: 5px;
