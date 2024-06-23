@@ -1,10 +1,11 @@
 <script>
     export let sv = 0
+    export let disabled = false
     var nsv = sv
 </script>
-<button class=sc on:mouseleave={() => sv = nsv}>
+<button class=sc on:mouseleave={disabled ? () => {} : () => sv = nsv}>
 {#each Array(5).fill() as _, i}
-    <button class=i on:mousemove={() => sv = i + 1} on:click={() => nsv = sv}>
+    <button class={disabled ? 'd': 'i'} on:mousemove={disabled ? () => {} : () => sv = i + 1} on:click={disabled ? () => {} : () => nsv = sv}>
     {#if sv > i}★{:else}☆{/if}
     </button>
 {/each}
@@ -27,5 +28,11 @@
         font-size: 25px;
         cursor: pointer;
         color:gold;
+    }
+    .d {
+        all: unset;
+        font-size: 20px;
+        color:gold;
+        padding: 4px;
     }
 </style>

@@ -24,6 +24,8 @@
                 else 
                     vto = user
             }}>📝</button>
+            {:else}
+            <a class="view nv" title='Értékeléseim megtekintése' href="/ertekelesek">🫣</a>
             {/if}
         </div>
     {/each}
