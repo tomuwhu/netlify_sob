@@ -13,3 +13,11 @@ export async function load({ cookies }) {
     }
     return { user: null, loggedinusers: null, alluser }
 }
+
+export const actions = {
+    insert: async ({ request, cookies }) => {
+        const formData = await request.formData()
+        console.log(cookies.get('user'))
+        console.log(formData);
+    }
+}
