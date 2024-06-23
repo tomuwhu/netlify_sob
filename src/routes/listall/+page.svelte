@@ -30,11 +30,15 @@
 {#if vto != null}
     <div class=vto>
         <form action="?/insert" method="POST">
-            <span class=x>Vélemény írása <i>{vto?.name}</i> részére:</span><br>
+            {#if vto.id}
+            <span class=x><i>{vto?.name}</i>&nbsp; pórtfóliójáról alkotott véleményem módosítása:</span>
+            {:else}
+            <span class=x><i>{vto?.name}</i>&nbsp; pórtfóliójának véleményezése:</span>
+            {/if}<br>
             <input type=hidden name=id value={vto.id}>
             <input type=hidden name=email value={vto.email}>
             <input type=hidden name=stars value={vto.stars}>
-            <textarea name=vto placeholder=Vélemény bind:value={vto.velemeny}></textarea>
+            <textarea class={vto.id>0?'vv':'nv'} name=vto placeholder=Vélemény bind:value={vto.velemeny}></textarea>
             <br>
             <br>
             <input type=submit value="Csak a szöveges vélemény rögzítése">
@@ -140,5 +144,10 @@
         box-shadow: 1px 1px 3px inset rgb(119, 22, 22);
         padding: 10px;
     }
-
+    :global(textarea.vv) {
+        background-color: rgb(235, 255, 221);
+    }
+    :global(textarea.nv) {
+        background-color: rgb(252, 255, 232);
+    }
 </style>
