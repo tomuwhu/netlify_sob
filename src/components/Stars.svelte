@@ -3,7 +3,7 @@
     export let disabled = false
     var nsv = sv
 </script>
-<button class=sc on:mouseleave={disabled ? () => {} : () => sv = nsv}>
+<button id=scx class=sc on:mouseleave={disabled ? () => {} : () => sv = nsv}>
 {#each Array(5).fill() as _, i}
     <button class={disabled ? 'd': 'i'} on:mousemove={disabled ? () => {} : () => sv = i + 1} on:click={disabled ? () => {} : () => nsv = sv}>
     {#if sv > i}★{:else}☆{/if}

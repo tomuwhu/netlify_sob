@@ -10,6 +10,7 @@ export async function load({ cookies }) {
     if (userstr) {
         var user = JSON.parse(userstr)
         var velemenyek = await db.getall("SELECT * FROM velemeny WHERE velemeny.portfolio = ?", [user.email])
+        console.log(velemenyek)
         return { user, velemenyek }
     }
     return { user: null, velemenyek }
