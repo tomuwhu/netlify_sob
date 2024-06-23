@@ -10,12 +10,16 @@
         <th>Név</th>
         <th>Hivatkozás</th>
         <th>Átlagos értékelés</th>
+        <th>Összes értékelés</th>
+        <th>Pontszám</th>
     </tr>
 {#each data.toplist as row}
     <tr>
         <td class="l"><div>{row.name}</div></td>
         <td class="l"><a href={row.pfurl} class="view" target="_blank">{row.pfurl}</a></td>
         <td class="c">{Number(row.st).toFixed(2)}</td>
+        <td class="r">{#each Array(Math.round(Number(row?.n)*5 - Math.round(Number(row?.n)*Number(row?.st)))).fill() as x, i}<i>☆</i>{/each}{#each Array(Math.round(Number(row?.n)*Number(row?.st))).fill() as x, i}★{/each}</td>
+        <td class="c x">{Number(row.score).toFixed(2)}</td>
     </tr>
 {/each}
 </table>
@@ -49,6 +53,21 @@
         color: rgb(235, 237, 207);
         font-weight: bold;
     }
+    td.r {
+        text-align: right;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 11px;
+        background: transparent;
+        box-shadow: none;
+        color:gold;
+        text-shadow: 0px 0px 2px black;
+    }
+    td.r i {
+        all: unset;
+        color:gold;
+        text-shadow: none;
+        text-shadow: 0px 0px 2px rgb(137, 137, 137);
+    }
     td a {
         all: unset;
         cursor: pointer;
@@ -60,5 +79,9 @@
         cursor: pointer;
         color: rgb(129, 98, 35);
         text-shadow: 1px 1px 3px gray;
+    }
+    td.x {
+        color: gold;
+        background-color: rgb(110, 97, 15);
     }
 </style>
