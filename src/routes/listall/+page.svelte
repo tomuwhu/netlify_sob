@@ -4,7 +4,7 @@
     import { goto } from '$app/navigation'
     import Stars from '$components/Stars.svelte'
     if (browser && data.user == null) goto('/login')
-    var vto = null, stars = 0
+    var vto = null
 </script>
 <h1 class='pl'>Portfóliók listája</h1>
 {#if data.user == null}
@@ -16,7 +16,7 @@
         <div class={data?.loggedinusers.includes(user.email) ? (user.email == data.user?.email ? 's1' : 's2') : 's3'}>
             <span>{user.email != data.user?.email ? user.name : 'Saját portfólióm'}</span> <a title='Megnéz' class="view" target="_blank" href="{user.pfurl}">👓</a>
             {#if user.email != data.user?.email}
-            <button title='Vélemény írása' on:click={() => {
+            <button class={user.id > 0 ? 'vv' : 'nv'} title='Vélemény írása' on:click={() => {
                 if (vto?.email == user.email) 
                     vto = null
                 else 
@@ -31,19 +31,26 @@
     <div class=vto>
         <form action="?/insert" method="POST">
             <span class=x>Vélemény írása <i>{vto?.name}</i> részére:</span><br>
+            <input type=hidden name=id value={vto.id}>
             <input type=hidden name=email value={vto.email}>
-            <input type=hidden name=stars value={stars}>
-            <textarea name=vto placeholder=Vélemény></textarea>
+            <input type=hidden name=stars value={vto.stars}>
+            <textarea name=vto placeholder=Vélemény bind:value={vto.velemeny}></textarea>
             <br>
             <br>
             <input type=submit value="Csak a szöveges vélemény rögzítése">
             <br>
-            <Stars bind:sv={stars}/>
+            <Stars bind:sv={vto.stars}/>
         </form>
 
     </div>
 {/if}
 <style>
+    button.vv {
+        background-color: rgb(186, 240, 205);
+    }
+    button.nv {
+        background-color: rgb(250, 230, 180);
+    }
     span.x {
         width: 300px;
         display: inline-block;

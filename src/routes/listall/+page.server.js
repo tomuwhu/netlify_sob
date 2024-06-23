@@ -6,9 +6,10 @@ export async function load({ cookies }) {
         cookies.delete('user', {path: '/'})
     }
     const userstr = cookies.get('user')
-    var alluser = await db.getall("SELECT * FROM user ORDER BY name")
+
     if (userstr) {
         var user = JSON.parse(userstr)
+        var alluser = await db.getall("SELECT * FROM user LEFT JOIN (SELECT * FROM velemeny WHERE velemeny.velemenyezo = ?) AS myvelemeny ON myvelemeny.portfolio = user.email ORDER BY name", [user.email])
         return { user, alluser, loggedinusers: Array.from(store) }
     }
     return { user: null, loggedinusers: null, alluser }
@@ -17,7 +18,19 @@ export async function load({ cookies }) {
 export const actions = {
     insert: async ({ request, cookies }) => {
         const formData = await request.formData()
-        console.log(cookies.get('user'))
-        console.log(formData);
+        const vuser = JSON.parse(cookies.get('user'))
+        const id = formData.get('id')
+        const velemenyezo = vuser.email
+        const portfolio = formData.get('email')
+        const stars = formData.get('stars')
+        const velemeny = formData.get('vto')
+        console.log(id, velemenyezo, portfolio, velemeny, stars)
+        if (id) {
+            await db.update("UPDATE velemeny SET velemeny = ?, stars = ? WHERE id = ?", [velemeny, stars, id])
+        } else {
+            await db.insert("INSERT INTO velemeny (velemenyezo, portfolio, velemeny, stars) VALUES (?, ?, ?, ?)", [velemenyezo, portfolio, velemeny, stars])
+        }
+        var alluser = await db.getall("SELECT * FROM user LEFT JOIN (SELECT * FROM velemeny WHERE velemeny.velemenyezo = ?) AS myvelemeny ON myvelemeny.portfolio = user.email ORDER BY name", [vuser.email])
+        return { user: vuser, alluser, loggedinusers: Array.from(store) }
     }
 }
