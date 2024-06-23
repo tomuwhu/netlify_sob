@@ -9,7 +9,7 @@ export async function load({ cookies }) {
 
     if (userstr) {
         var user = JSON.parse(userstr)
-        var alluser = await db.getall("SELECT * FROM user LEFT JOIN (SELECT * FROM velemeny WHERE velemeny.velemenyezo = ?) AS myvelemeny ON myvelemeny.portfolio = user.email ORDER BY name", [user.email])
+        var alluser = await db.getall("SELECT * FROM user LEFT JOIN (SELECT * FROM velemeny WHERE velemeny.velemenyezo = ?) AS myvelemeny ON myvelemeny.portfolio = user.email WHERE user.pfurl != 'admin' ORDER BY name", [user.email])
         return { user, alluser, loggedinusers: Array.from(store) }
     }
     return { user: null, loggedinusers: null, alluser }
@@ -24,7 +24,6 @@ export const actions = {
         const portfolio = formData.get('email')
         var stars = formData.get('stars')
         const velemeny = formData.get('vto')
-        console.log(id, velemenyezo, portfolio, velemeny, stars)
         if (id) {
             if (!stars) stars = 0
             await db.update("UPDATE velemeny SET velemeny = ?, stars = ? WHERE id = ?", [velemeny, stars, id])

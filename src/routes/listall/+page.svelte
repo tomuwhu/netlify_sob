@@ -10,7 +10,9 @@
 {#if data.user == null}
     <h3>Nincs bejelentkezve!</h3>
 {:else}
-    <h3>Bejelentkezve: <i>{data.user.name}</i></h3>
+    <h3>Bejelentkezve: <i>{data.user.name}</i>
+    {#if data.user.pfurl == 'admin'}<b>(admin)</b>{/if}
+    </h3>
     <div class="fc">
     {#each data.alluser as user}
         <div class={data?.loggedinusers.includes(user.email) ? (user.email == data.user?.email ? 's1' : 's2') : 's3'}>
@@ -80,6 +82,10 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    :global(b) {
+        color: rgb(164, 30, 30);
+        text-shadow: 0px 0px 2px rgb(178, 178, 178);
     }
     :global(div.fc div) {
         display: inline-block;

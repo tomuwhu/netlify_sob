@@ -23,10 +23,10 @@
         <th>Név</th>
         <th>Hivatkozás</th>
         <th colspan=2 class=the>Értékelés</th>
-        <th>Pontszám</th>
+        <th class=zth>Pontszám</th>
     </tr>
 {#each data.toplist as row, rid}
-    <tr>
+    <tr class={data.user.email == row.email ? 's1' : 's2'}>
         <th class=rid>{rid+1}.</th>
         <td class=l><div>{row.name}.</div></td>
         <td class=l><a href={row.pfurl} class="view" target="_blank">{row.pfurl}</a></td>
@@ -37,6 +37,12 @@
 {/each}
 </table>
 <style>
+    th.zth {
+        padding-right: 6px;
+    }
+    tr.s1 {
+        background-color: rgb(186, 240, 205);
+    }
     tr.head th {
         color: rgb(168, 165, 0);
     }
@@ -52,12 +58,14 @@
         color:rgb(164, 139, 0);
         text-shadow: 0px 0px 3px rgb(136, 136, 136);
         font-size: 20px;
+        border-radius: 8px;
+        padding-left: 15px;
     }
     table {
         margin: 0 auto;
         padding-top: 6px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
         padding-bottom: 20px;
         border-spacing: 10px;
         border: solid 2px gray;
@@ -131,5 +139,6 @@
         box-shadow: none;
         text-shadow: 0px 0px 2px rgb(137, 137, 137);
         padding: 2px;
+        padding-right: 6px;
     }
 </style>
