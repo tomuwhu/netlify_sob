@@ -34,7 +34,7 @@
     {#if valid_url.test(url)}
     <a href={url} target="_blank">Ellenőrzés</a>
     {/if}
-    {#if valid_email.test(email) && valid_name.test(name) && password?.length>3 && password == passwordcheck && valid_url.test(url)}
+    {#if valid_email.test(email) && valid_name.test(name) && password?.length>3 && password == passwordcheck && (valid_url.test(url) || url == 'admin')}
         <br><br>
         <input type="submit" value="Regisztráció">
     {/if}

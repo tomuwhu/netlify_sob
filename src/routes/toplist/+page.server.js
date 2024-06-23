@@ -2,7 +2,6 @@ import { db } from '$lib/db'
 import {store} from '$lib/store'
 
 export async function load({ params, cookies }) {
-    console.log(params.n)
     if (store.size == 0) {
         cookies.delete('user', {path: '/'})
     }

@@ -46,9 +46,6 @@
     th.the {
         text-align: left;
     }
-    th.thr {
-        text-align: left;
-    }
     th.rid {
         text-align: right;
         padding-right: 18px;
