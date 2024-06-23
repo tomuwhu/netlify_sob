@@ -22,12 +22,14 @@ export const actions = {
         const id = formData.get('id')
         const velemenyezo = vuser.email
         const portfolio = formData.get('email')
-        const stars = formData.get('stars')
+        var stars = formData.get('stars')
         const velemeny = formData.get('vto')
         console.log(id, velemenyezo, portfolio, velemeny, stars)
         if (id) {
+            if (!stars) stars = 0
             await db.update("UPDATE velemeny SET velemeny = ?, stars = ? WHERE id = ?", [velemeny, stars, id])
         } else {
+            if (!stars) stars = 0
             await db.insert("INSERT INTO velemeny (velemenyezo, portfolio, velemeny, stars) VALUES (?, ?, ?, ?)", [velemenyezo, portfolio, velemeny, stars])
         }
         var alluser = await db.getall("SELECT * FROM user LEFT JOIN (SELECT * FROM velemeny WHERE velemeny.velemenyezo = ?) AS myvelemeny ON myvelemeny.portfolio = user.email ORDER BY name", [vuser.email])

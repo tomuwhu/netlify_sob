@@ -6,6 +6,7 @@
         [   
             {name: 'Kezdőoldal', href: '/'}, 
             {name: 'Felhasználók portfóliói', href: '/listall'},
+            {name: 'Portfólió toplista', href: '/toplist'}, 
             {name: 'Tárgyi tematikák, követelmények', href: '/tematikak'}, 
             {name: 'Felhasználói adatlap', href: '/login'}
         ] : [   
