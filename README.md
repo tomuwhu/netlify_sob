@@ -1,6 +1,6 @@
 # Netlify_SOB (sobes)
 
-Softver development course
+Software development course
 
 ## Developing
 
