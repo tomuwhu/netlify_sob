@@ -1,165 +1,51 @@
-# Asztali- és Mobil alkalmazásfejlesztés tematika
+# Portfólió alapú oktatás
 
-## Ismétlés: [C\#](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference)
+## A Portfólió elkészítése, folyamatos frissítése
 
-- VSCode: C\# for Visual Studio Code Plugin
-- C\# programozási nyelv
-  - [Az első C\#-kód megírása](https://learn.microsoft.com/hu-hu/training/modules/csharp-write-first/)
-  - Konzol alkalmazás
-  - Változók, típusok
-  - Input/Output
-  - Fájl beolvásás
-  - TXT és CSV parsing
-  - Típuskonvezió
-  - Osztályok, objektumok, property-k, methódusok
-  - Adatfeldolgozás, kiválasztás, kiválogatás, szűrés, rendezés, összegzés
-  - [Debugolás, hibakeresés](https://learn.microsoft.com/hu-hu/training/modules/dotnet-debug/3-analyze-your-program-state)
-  - [C\# referencia](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/)
-    - Types
-    - KeyWords
-      - Modifiers
-      - Operators
-      - Statements
-        - if, switch
-        - do, for, foreach, while
-        - break, continue, goto, return
-        - exception handling
-        - fixed, lock, yield
-      - namespace, base, this
-      - from, where, select, group, join, ascending...
-  - [C# Programming Exercises](https://www.w3resource.com/csharp-exercises/)
-  
-## Haladó szintű objektumorientált programozási technikák ismerete
-  
-- Öröklődés és polimorfizmus (extends, polimorfizmus, interface)
-- Metódus- és konstruktor-túlterhelés
-  - több konstruktor együttes használata, 
-  - a method overloading hasznossága,
-  - felhasználási korlátok
-- Egységbezárás, objektumok közötti kommunikáció
-  - objektumok együttműködése és kommunikációja, 
-  - az egységbezárás hasznosságának szemléltetése, 
-  - getter és setter függvények
-- IDE fejlesztői eszközeinek használata
-- Refaktorálási lehetőségek egységbezárás támogatására
-  
-## Haladó szintű objektumorientált programozási technikák gyakorlati alkalmazása
+A képzés elején a diákok egy online elérhető gyűjtemény kezdőoldalát hozzák létre (a portfólió navigációs oldala),
+amire hivatkozások formájában a tanév során gyűjtik az
 
-- Létező osztályból új osztály leszármaztatása
-- A származtatott osztályban új tulajdonságok és metódusok definiálása
-- A származtatott osztályban az ősosztály tulajdonságainak és metódusainak felüldefiniálása
-- Öröklődést alkalmazó osztályhierarchia tervezése és megvalósítása
+- órai kötelező munkákat/feladatokat
+- az otthonra kiadott kötelező feladatokat
+- az órai és otthoni választható és szorgalmi feladatokat
+- az önálló fejlődést bemutató munkákat
+- a csoportos projektmunkát
 
-## Nevezetes algoritmusok és megvalósításuk OOP-technológiával
+A portfólió navigációs oldalának online elérhetőségét a tanév második hetének végéig meg kell adni a tanár által megjelölt módon, ezt később külön kérésre lehet változtatni.
 
-- A véletlen és tulajdonságai: valószínűségi változó mint véletlen, véletlenek összege
-- Eloszlásfüggvény fogalma, egyenletes eloszlás, normális eloszlás
-- Futásiidő-komplexitás, memóriaigény
-- Nevezetes adatstruktúrák memóriaigénye és műveletek időkomplexitása:
-  - Tömb (C#/JavaScript/TypeScript/PHP)
-  - Láncolt lista (JavaScript/C#)
-  - Verem (JavaScript/C#)
-  - Többszörösen láncolt lista
-  - Fa, bináris fa, kupac, keresőfák
-- Nevezetes algoritmusok és implementálásuk:
-  - Bináris keresés
-  - Buborékrendezés
-  - Beszúrásos rendezés
-  - Quick Sort (C#), felosztóelem-választási stratégiák
-  - Mintaillesztés automatával
-  - Reguláris Kifejezések (C#, JavaScript)
-- Rekurzió és alkalmazása
-  - Hanoi tornyai
-  - Az aknakereső rekurzív hívása 0 aknánál
-  - Tükörszó probléma
-  - Dinamikus programozás, Mohó stratégia
-    - Hátizsák és töredékes hátizsák, pénzváltás probléma
-    - Kincskereső
-  - Gráf adatszerkezet és alapvető gráf-algoritmusok
-    - Mélységi bejárás, mélységi keresés, erősen összefüggő komponensek
-    - Szélességi bejárás, szélességi keresés, legrövidebb út keresése
-    - Súlyozott gráfok, Floyd-Warshall algoritmus, Dijsktra algoritmus
-    - A* algoritmus,
-    - Utazóugynök probléma, Problémák osztályozása, NP teljesség
-    - Turing gép, Church-Turing tézis
-    - Approximációs algoritmusok
-  - Egyszerű problémák megoldása (CSES Problem SET)
-  - Egyszerű problémák megoldása (HackerrRank Problem Solving)
-  - Véletlenített algoritmusok
-  - Online algoritmusok és elemzésük
-  
-## A [tiszta kód](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29) elméleti alapjai és gyakorlata
+A portfólióba csatolt megoldásoknak a megfelelő dokumentációval együtt (portfólió elemei):
 
-- Elnevezések (Python/JavaScript/TypeScript/C++/C#/PHP)
-- Függvények (Python/JavaScript/TypeScript/C++/C#/PHP)
-- Kommentek (HTML/MarkDown/CSS/Python/JavaScript/TypeScript/C++/C#/PHP)
-- Kódformázás (Prettier)
-- Objektumok és adatstruktúrák (JavScript/TypeScript)
-- Hibakezelés (NodeJS/C#: Try-Catch)
-- Határok és külső kód használata
-- Unit tesztek (NodeJS: Jest)
-- Osztályok (NodeJS/C#)
+- lehetőleg hibamentesnek kell lennie, félig elkészült, hibákat tartalmazó szoftvereket ne tegyünk be a portfólióba
+- a konzolos és windows appok (C#) a forrásfájlok mellet telepíthető, kipróbálható (lefordított) formában is kerüljenek feltöltésre zip formátumban
+- a webes projektek online működőképesek legyenek és a dokumentációjuk markdown formátumban a README.md fájlban szerepeljen
+- a portfólió elemeinek dokumentációiban szerepelnie kell minden elemre vonatkozóan:
+    - telepítési útmutató
+    - felhasznált irodalom és külső szoftverek
+    - felhasználói dokumentáció
+    - tervezési és fejlesztői dokumentáció
+    - teljes forráskód, magyarázatokkal (kommentelve)
 
-## Unit tesztelés
+*A portfólió alapú oktatásban az értékelés alapját a portfólió képzi, minden tárgyelemre a jegyek nagy része a portfólió folyamatos értékeléséből adódik.*
 
-- A szoftvertesztelés szintjei, szerepük
-  - Unit teszt
-  - Modul vagy komponens teszt
-  - Integrációs teszt
-  - Rendszerteszt
-  - Átvételi teszt
-- Unit test case-ek létrehozása és futtatása NodeJS/C# környezetben
-  - NodeJS: Jest
-  - C#: Nunit, Test, TestFixture
-- Assertiönök (C#)
-  - AreEqual, AreNotEqual, AreSame, AreNotSame
-  - IsNull, IsNotNull, IsTrue, IsFalse
-- AAA minta
-- „felépítő” és „lebontó” funkcionalitás unit test framework-ben (C#)
-  - SetUp, TearDown
-- osztály, függvény vagy metódus teljes működésének lefedése unit tesztekkel:
-  - összes lehetséges bemenet-kimenet páros
-  - a tesztek futtatásakor a tesztelendő kód minden eleme lefusson
+A portfóliót a tanév során folyamatosan karban kell tartani, az elkészített kötelező feladatok linkjét külön felszólítás nélkül a leadási határidőig be kell tenni a portfólió navigációs oldalára.
 
-## Mobil alkalmazások fejlesztése
+Az órai munkákat és egyéb feladatokat az elkészülést követően legkésőbb a következő munkanap kezdetéig kell elhelyezni a portfólióban.
 
-- Android mobilalkalmazás-fejlesztői környezetet kialakítása
-  - React Native: Editor, NodeJS, npm, react-native, expo
-  - Progressive Web App: Editor, NodeJS, npm, manifest, serviceWorker
-- “Hello, World!” alkalmazás fejlesztése és eszközre történő telepítése
-- Képes interaktív felhasználói interfészek (UI) lefejlesztésére
-  - UI-elemek létrehozása és elrendezése a képernyőn
-  - UI-elemek tartalmának dinamikus változtatása kódból (data binding)
-  - UI-elemek interakciójának kezelése kódból
-- Képernyők közti navigáció
-- HTTP kérés küldés, a válasz kezelése, szükség esetén
-  - a küldendő vagy érkező JSON-adatok szerializálása, deszerializálása
-- HTTP kérés eredményének tárolása, megjelenítése
+A portfólióban határidőig el nem helyezett szoftverek, megoldások - külön értesítés nélkül - elégtelen osztályzattal lesznek értékelve.
 
-## Projektmunka
+A portfólióban nem kell elhelyezni az oktatótól előre titkosítási engedélyt kapott projektek forráskódját (pl. külső projektek, elfogadás előtti tudományos publikációk, ...)
 
-### Konzolalkalmazás fejlesztése NodeJS/C\# nyelven
+## Teljes portfólió értékelése
 
-- [CSES Problem SET](https://cses.fi/problemset/) megoldása NodeJS nyelven
-  - [Weird algorithm](https://www.youtube.com/watch?v=094y1Z2wpJg)
-  - Missing Number
-  - Repetitions
-  - Increasing Array
-  - Permutations
-  - Number Spiral
-  - Tower of Hanoi
-  - [Two Sets](https://tomuwhu.github.io/sv03/2sets)
-  - Distinct Numbers
-  - Dice Combinations
-  - Counting Rooms
-- Parancssori paraméterek beolvasása
-- [HackerRank](https://www.hackerrank.com/domains/algorithms) feladatok megoldása NodeJS/C\# nyelven
+- kötelező elemek megjelenése (házi feladatok, órai munkák, projektfeladat előrehaladása...)
+- nem kötelező elemek: mefelelő haladás, fejlődés (a nem választható és önálló elemek is kötelezőek, csak az nem kötelező, hogy mit és hogyan fejlesszen)
 
-### Asztali- és mobilalkalmazások fejlesztése (C\#/Electron)
+## A portfólió elemek értékelésének szempontjai
 
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) telepítése
-- WPF alkalmazások fejlesztése
-  - [Tutorial: Create a new WPF app with .NET](https://learn.microsoft.com/hu-hu/dotnet/desktop/wpf/get-started/create-app-visual-studio?view=netdesktop-7.0)
-- [Electron](https://electron-vite.org/guide/)/TypeScript+Svelte telepítése
-- Electron app fejlesztése
-  
+- *vizualizáció*: megjelenés, stílus
+- *felhasználói interfész*: funkcionalitás, átláthatóság, használhatóság, kényelem
+- *optimalizástság*: (futási idők, tárigény, ...)
+- *teljesség*: funkcionalitás, hibamentesség, tesztelési környezet, tesztek
+- *innováció*: ötletesség, egyediség
+- *it biztonság*: config fájlok, adatbiztonság, feltörhetőség
+- *dokumentáció*: teljesség, olvashatóság, szerkezet, megjelenés, helyesség
